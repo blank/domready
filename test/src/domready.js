@@ -37,7 +37,7 @@
                 }, false);
                 win.addEventListener("onload", init, false);
             } else if(doc.attachEvent) {
-                // In IE, ensure firing before onload, maybe late but safe also for iframes.
+                // For a frame
                 doc.attachEvent("onreadystatechange", function() {
                     if (doc.readyState === "complete") {
                         doc.detachEvent("onreadystatechange", arguments.callee);

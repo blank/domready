@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>domReady test</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p>After 5 seconds, begin to load domready.js. In this cases, domReady is called after the browser event has already occurred.</p>
+    <script type="text/javascript">
+        var head = document.getElementsByTagName('head')[0];
+        function load(url, callback){
+            //Ref: http://www.planabc.net/2008/10/31/javascript_ready_onload/
+            var el = document.createElement("script");
+            if(!+'\v1') { // IE6-8
+                el.onreadystatechange = function () {
+                    var rs = el.readyState;
+                    if ( rs == 'loaded' || rs == 'complete') { // or !/in/.test(rs)
+                        callback();
+                    }
+                    el.onreadystatechange = null;
+                };
+            } else {
+                el.onload =  function () {
+                    callback();
+                    el.onload = null;
+                };
+            }
+            //el.async = true;
+            el.src = url;
+            head.insertBefore(el, head.firstChild);
+        }
+        setTimeout(function(){
+            load('src/domready.js',function(){
+                domReady(function () {
+                    document.getElementById('title').innerHTML = 'domready';
+                    domReady(function () {
+                        document.getElementById('title').innerHTML += '✓';
+                    });
+                 });
+            })
+        },5000)
+
+    </script>
+</body>
+</html>
