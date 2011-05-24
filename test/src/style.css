@@ -1,0 +1,77 @@
+body {
+  font: 18px/26px "Lucida Grande", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 30px 0 10px 0;
+}
+
+a img {
+  border: 0;
+}
+
+h1 {
+  font: 40px Georgia, "Times New Roman", Times, serif;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1 .byline {
+  font: italic 18px "Lucida Grande", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+  margin: 3px 0;
+  position: relative;
+  top: 0;
+  left: 5px;
+}
+
+h2 { font-size: 28px; }
+h3 { font-size: 22px; }
+
+#content {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+code {
+  font-family: "Bitstream Vera Sans Mono", courier, monospace;
+}
+
+pre {
+  font: 16px/24px "Bitstream Vera Sans Mono", courier, monospace;
+  background: #f6f6f6 !important;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+pre.wrong {
+  background: #fff6f6 !important;
+  border-color: #ffc6c6;
+}
+
+ul {
+  list-style-type: square;
+}
+
+#copyright {
+  border-top: solid 1px #ccc;
+  margin-top: 20px;
+  padding-top: 5px;
+  color: #999;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
