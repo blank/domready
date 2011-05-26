@@ -2,7 +2,7 @@ domReady
 --------
 It's easy. Works like this:
 
-    domRead(function () {
+    domReady(function () {
       // dom is loaded!
     });
 
